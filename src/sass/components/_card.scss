@@ -1,0 +1,28 @@
+.card {
+  border-radius: 12px;
+  border-color: #edeff5;
+  background-color: var(--gray-10);
+  box-shadow: 0px 12px 48px rgba(0, 44, 109, 0);
+  transition: all 0.24s ease-in-out;
+  
+
+  .card-body {
+    padding: 32px;
+    @include breakpoint(lg){
+      padding: 25px;
+    }
+  }
+ 
+  &:hover {
+    box-shadow: 0px 12px 48px rgba(0, 44, 109, 0.1);
+    border-color: var(--primary-500);
+  }
+  &:hover .footer-content a {
+    color: var(--primary-500);
+    text-decoration: none;
+  }
+}
+
+
+
+
