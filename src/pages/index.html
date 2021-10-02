@@ -1,29 +1,15 @@
 {% extends "layout/layout.html" %}
-
+{% set body_class = "styleguide" %}
 {% block content %}
 
-{% include "../templates/layout/header-footer/header-normal.html" %}
-
-<section>
-    <div class="rt-spacer-100"></div>
-    <div class="rt-spacer-100"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-4">
-                <div class="rt-single-icon-box">
-                    <div class="icon-thumb">
-                        <i class="ph-map-pin"></i>
-                    </div>
-                    <div class="iconbox-content">
-                        Lorem ipsum dolor sit.
-                    </div>
-                </div>
+<section class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="display-3">
+                Let's Start
             </div>
         </div>
     </div>
-    <div class="rt-spacer-100"></div>
 </section>
-
-{% include "../templates/layout/header-footer/footer-three.html" %}
 
 {% endblock %}

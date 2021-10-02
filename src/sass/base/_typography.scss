@@ -17,38 +17,34 @@ h6,
 
 @each $cheadingfont in $headingfontSize {
   $i: index($headingfontSize, $cheadingfont);
-  h#{$i} ,   .text-h#{$i}{
+  h#{$i},
+  .text-h#{$i} {
     font-size: $cheadingfont;
     line-height: nth($headingLineheight, $i);
-    
   }
- 
 }
 
-@media (max-width: 1199.98px){
+@media (max-width: 1199.98px) {
   @each $cheadingfont1 in $headingfontSize_lg {
     $i: index($headingfontSize_lg, $cheadingfont1);
-    h#{$i} ,   .text-h#{$i}{
+    h#{$i},
+    .text-h#{$i} {
       font-size: $cheadingfont1;
       line-height: nth($headingLineheight_lg, $i);
-      
     }
-   
   }
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 767.98px) {
   @each $cheadingfont2 in $headingfontSize_xs {
     $i: index($headingfontSize_xs, $cheadingfont2);
-    h#{$i} ,   .text-h#{$i}{
+    h#{$i},
+    .text-h#{$i} {
       font-size: $cheadingfont2;
       line-height: nth($headingLineheight_xs, $i);
-      
     }
-   
   }
 }
-
 
 @for $i from 4 through 9 {
   .ft-wt-#{$i} {
@@ -56,7 +52,7 @@ h6,
   }
 }
 
-@for $i from 11 through 30 {
+@for $i from 11 through 40 {
   .f-size-#{$i} {
     font-size: $i * 1px !important;
   }
@@ -70,7 +66,6 @@ h6,
   }
 }
 
-
 @each $currentfont in $bodyfontvariation {
   $i: index($bodyfontvariation, $currentfont);
   .body-font-#{$i} {
@@ -78,21 +73,3 @@ h6,
     line-height: nth($lineheightvariation, $i);
   }
 }
-
-@each $color, $shades in $colors {
-  @each $shade, $value in $shades {
-    #{".text-" + $color + "-" + $shade} {
-      color: #{$value} !important;
-    }
-    #{".bg-" + $color + "-" + $shade} {
-      background-color: #{$value} !important;
-    }
-    #{".hoverbg-" + $color + "-" + $shade} {
-      
-      &:hover{
-        background-color: #{$value} !important;
-      }
-    }
-  }
-}
-

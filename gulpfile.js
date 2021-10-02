@@ -8,12 +8,12 @@ const sourcemaps = require('gulp-sourcemaps');
 //const sass = require('gulp-sass');
 const sass = require('gulp-dart-sass');
 const del = require('del');
-const imagemin = require('gulp-imagemin');
-const imageminPngQuant = require('imagemin-pngquant');
-const imageminjpegCrompress = require('imagemin-jpeg-recompress');
+//const imagemin = require('gulp-imagemin');
+//const imageminPngQuant = require('imagemin-pngquant');
+//const imageminjpegCrompress = require('imagemin-jpeg-recompress');
 const babel = require('gulp-babel');
 const rename = require("gulp-rename");
-const csscomb = require('gulp-csscomb');
+//const csscomb = require('gulp-csscomb');
 const browserSync = require('browser-sync').create();
 const prettyHtml = require('gulp-pretty-html');
 const nunjucksRender = require('gulp-nunjucks-render');
@@ -127,16 +127,16 @@ function csspluginTask() {
 
 function imagetask() {
     return src(files.image_path)
-        .pipe(imagemin(
-            [
-                imagemin.gifsicle(),
-                imagemin.jpegtran(),
-                imagemin.optipng(),
-                imagemin.svgo(),
-                imageminPngQuant(),
-                imageminjpegCrompress()
-            ]
-        ))
+        // .pipe(imagemin(
+        //     [
+        //         imagemin.gifsicle(),
+        //         imagemin.jpegtran(),
+        //         imagemin.optipng(),
+        //         imagemin.svgo(),
+        //         imageminPngQuant(),
+        //         imageminjpegCrompress()
+        //     ]
+        // ))
         .pipe(dest(files.output + "/" + "assets/images"))
         .pipe(browserSync.stream());
 }

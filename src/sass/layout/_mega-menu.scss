@@ -1,66 +1,62 @@
-.rt-mega-menu{
-    position: absolute;
-    top: 80%;
-    left: 0%;
-    background: #fff;
-    z-index: 999;
-    text-align: left;
-    border-radius: 6px;
+.rt-mega-menu {
+  position: absolute;
+  top: 80%;
+  left: 0%;
+  background: #fff;
+  z-index: 999;
+  text-align: left;
+  border-radius: 6px;
+  width: 100%;
+  margin: auto;
+  right: 0;
+  transition: all 0.42s ease-in-out;
+
+  padding: 12px 0px;
+  border: 1px solid var(--gray-100);
+  box-shadow: 0px 12px 32px rgba(25, 31, 51, 0.08);
+
+  .rt-container,
+  .container {
+    max-width: 100%;
+    padding: 0px;
+  }
+  .row {
     width: 100%;
-    margin: auto;
-    right: 0;
-    transition: all 0.42s ease-in-out;
-    padding: 15px 0px;
-    box-shadow: 0px 0px 15px 0px rgba(#1d566a, 0.16);
-    @include breakpoint(xl){
-        width: 75%
-    }
-    @include breakpoint(lg) {
-        width: 80%
-    }
+  }
+  h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 30px;
+    padding-left: 17px;
+    text-transform: capitalize;
     @include breakpoint(md) {
-        width: 100%;
+      margin: 15px 0 15px;
+      font-size: 16px;
     }
-    .rt-container, .container {
-        max-width: 100%;
+  }
+  a {
+    display: block;
+    font-size: 15px !important;
+    padding: 8px 15px !important;
+    img {
+      display: block;
+      margin: 0 auto;
+      @include breakpoint(md) {
+        margin-top: 15px;
+      }
     }
-    .row  {
-        width: 100%;
+    &:hover,
+    &.active {
+      color: var(--primary-500);
     }
-    h4  {
-        font-size: 18px;
-        font-weight: 500;
-        margin: 0 0 30px;
-        padding-left: 17px;
-        text-transform: capitalize;
-        @include breakpoint(md) {
-            margin: 15px 0 15px;
-            font-size: 16px;
-        }
+    span {
+      text-transform: capitalize;
+      display: block;
+      text-align: center;
+      margin: 10px 0 0;
     }
-    a {
-        display: block ;
-        font-size: 15px !important;
-        padding: 5px  10px!important;
-        img {
-            display: block;
-            margin: 0 auto;
-            @include breakpoint(md) {
-                margin-top: 15px;
-            }
-        }
-        &:hover {
-            color: var(--primary-600);
-        }
-        span {
-            text-transform: capitalize;
-            display: block;
-            text-align: center;
-            margin: 10px 0 0;
-        }
-    }
-    @include hidden()
-    // &:before
+  }
+  @include hidden() // &:before
     //     content: ""
     //     position: absolute
     //     top: 2px
@@ -72,10 +68,5 @@
     //     transform: rotate(135deg)
     //     box-shadow: -2px 2px 2px -1px rgba(60, 72, 88, 0.15)
     //     @include breakpoint(md)
-    //         display: none 
+    //         display: none ;
 }
-        
-            
-
-
-    

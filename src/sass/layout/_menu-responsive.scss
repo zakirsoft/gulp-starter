@@ -21,9 +21,7 @@
     color: var(--primary-500);
   }
   .main-menu > ul > li.menu-item-has-children > ul.sub-menu,
-  .main-menu>ul>li.menu-item-has-children> .rt-mega-menu
-  
-  {
+  .main-menu > ul > li.menu-item-has-children > .rt-mega-menu {
     display: none;
     transition: none;
     position: static;
