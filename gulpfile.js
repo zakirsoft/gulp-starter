@@ -13,11 +13,12 @@ const del = require('del');
 //const imageminjpegCrompress = require('imagemin-jpeg-recompress');
 const babel = require('gulp-babel');
 const rename = require("gulp-rename");
-//const csscomb = require('gulp-csscomb');
+const postcss = require("gulp-postcss");
 const browserSync = require('browser-sync').create();
 const prettyHtml = require('gulp-pretty-html');
 const nunjucksRender = require('gulp-nunjucks-render');
 const cssbeautify = require('gulp-cssbeautify');
+
 
 //path 
 const files = {
@@ -181,6 +182,18 @@ function dlt_dist() {
 }
 
 
+function tailWind(){
+    console.log('tailwind task start');
+    return src(files.sass_path)
+    .pipe(sass())
+    .pipe(dest(files.output + "/" + 'assets/css'))
+    .pipe(postcss())
+    .pipe(concat('app.css'))
+    .pipe(dest(files.output + "/" + 'assets/css'))
+   
+    
+
+}
 
 function reload(done) {
     browserSync.reload();
@@ -189,6 +202,7 @@ function reload(done) {
 
 function watchfiles() {
     watch([files.sass_path], series(sassCompile, reload));
+    watch([files.sass_path], series(tailWind, reload));
     watch([files.css_path], series(csspluginTask, reload));
     watch([files.main_js_path], series(appJstask, reload));
     watch([files.plugins_path], series(scriptsTask, reload));
@@ -207,7 +221,8 @@ function  build (){
 exports.default = parallel(
     dlt_dist,
     nunjucks,
-    sassCompile,
+    //sassCompile,
+    tailWind,
     csspluginTask,
     copyjs2,
     copyjs,
