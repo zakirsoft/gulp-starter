@@ -1,23 +1,19 @@
 {
-  "name": "rtstarter",
+  "name": "project-name",
   "version": "1.0.1",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://mahediamin@bitbucket.org/mahediamin/mr-stater.git"
-  },
   "keywords": [
     "nunjucks-starter",
     "gulp",
     "starter"
   ],
-  "author": "Mahedi Amiin",
+  "author": "Zakirsoft (info@zakirsoft.com)",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/mahediamin/mr-stater#readme",
+  "homepage": "https://zakirsoft",
   "devDependencies": {
     "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
