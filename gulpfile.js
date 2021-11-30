@@ -238,16 +238,19 @@ exports.default = parallel(
 );
 
 exports.build = parallel(
+  
     nunjucks,
-    sassCompile,
+    //sassCompile,
+    tailWind,
     csspluginTask,
     copyjs2,
     copyjs,
     imagetask,
     copyfonts,
     scriptsTask,
+  
+   
     appJstask,
-    build
 )
 
 
